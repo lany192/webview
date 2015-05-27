@@ -10,6 +10,6 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="62dp"
-        android:text="Button" />
+        android:text="click me" />
 
 </RelativeLayout>
