@@ -18,7 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Web1Activity" />
-        <activity android:name=".Web2Activity"></activity>
+        <activity android:name=".Web2Activity"/>
     </application>
 
 </manifest>

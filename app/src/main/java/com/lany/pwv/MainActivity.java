@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mEditText = (EditText) findViewById(R.id.url_input);
-        mEditText.setText("http://www.baidu.com");
+        mEditText.setText("http://www.qq.com/");
         findViewById(R.id.button1).setOnClickListener(new View.OnClickListener() {
 
             @Override
