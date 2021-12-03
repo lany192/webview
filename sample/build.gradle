@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.github.lany192.web"
-        minSdkVersion 14
+        minSdkVersion 16
         targetSdkVersion 31
         versionCode 1
         versionName "1.0"

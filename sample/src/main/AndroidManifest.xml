@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.github.lany192.web">
+    package="com.github.lany192.web" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -8,10 +8,13 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".x5.X5Activity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,10 +22,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Web1Activity"
+            android:name=".webkit.Web1Activity"
             android:exported="true" />
         <activity
-            android:name=".Web2Activity"
+            android:name=".webkit.Web2Activity"
             android:exported="true" />
     </application>
 

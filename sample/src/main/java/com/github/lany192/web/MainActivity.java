@@ -7,6 +7,9 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.github.lany192.web.webkit.Web1Activity;
+import com.github.lany192.web.webkit.Web2Activity;
+
 public class MainActivity extends AppCompatActivity {
     EditText mEditText;
 

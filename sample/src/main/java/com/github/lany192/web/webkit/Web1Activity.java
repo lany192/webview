@@ -1,4 +1,4 @@
-package com.github.lany192.web;
+package com.github.lany192.web.webkit;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -10,6 +10,7 @@ import android.webkit.WebViewClient;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.github.lany192.web.R;
 import com.github.lany192.webkit.ProgressWebView;
 
 public class Web1Activity extends AppCompatActivity {

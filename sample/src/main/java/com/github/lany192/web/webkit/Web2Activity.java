@@ -1,4 +1,4 @@
-package com.github.lany192.web;
+package com.github.lany192.web.webkit;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.github.lany192.web.R;
 
 public class Web2Activity extends AppCompatActivity {
     WebView mWebView;
