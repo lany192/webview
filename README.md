@@ -1,3 +1,4 @@
+[![](https://jitpack.io/v/lany192/webview.svg)](https://jitpack.io/#lany192/webview)
 # ProgressWebView
 A android webview with progressbar
 实现带进度条webview的两种方法
