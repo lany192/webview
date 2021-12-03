@@ -1,4 +1,4 @@
-package com.lany.pwv;
+package com.github.lany192.web;
 
 import android.content.Intent;
 import android.os.Bundle;
