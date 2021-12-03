@@ -28,17 +28,8 @@ public class X5Activity extends AppCompatActivity {
         String url = intent.getStringExtra("url");
 
         mWebView.setWebChromeClient(new MyWebChromeClient());
-        mWebView.setWebViewClient(webViewClient);
         mWebView.loadUrl(url);
     }
-
-    private WebViewClient webViewClient = new WebViewClient() {
-        @Override
-        public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            view.loadUrl(url);
-            return true;
-        }
-    };
 
     public class MyWebChromeClient extends WebChromeClient {
         @Override
