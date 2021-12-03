@@ -2,18 +2,31 @@ package com.github.lany192.x5web;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
+import android.widget.AbsoluteLayout;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 
+import com.tencent.smtt.sdk.WebChromeClient;
 import com.tencent.smtt.sdk.WebSettings;
 import com.tencent.smtt.sdk.WebSettings.LayoutAlgorithm;
 import com.tencent.smtt.sdk.WebView;
 import com.tencent.smtt.sdk.WebViewClient;
 
 public class X5WebView extends WebView {
+    private final ProgressBar mProgressBar;
 
     @SuppressLint("SetJavaScriptEnabled")
     public X5WebView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
+        mProgressBar = new ProgressBar(context, null, android.R.attr.progressBarStyleHorizontal);
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 8);
+        mProgressBar.setLayoutParams(layoutParams);
+        Drawable drawable = context.getResources().getDrawable(R.drawable.web_progress_bar_states);
+        mProgressBar.setProgressDrawable(drawable);
+        addView(mProgressBar);
+        setWebChromeClient(new MyWebChromeClient());
         this.setWebViewClient(new WebViewClient() {
             //防止加载网页时调起系统浏览器
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
@@ -41,5 +54,28 @@ public class X5WebView extends WebView {
         // webSetting.setRenderPriority(WebSettings.RenderPriority.HIGH);
         webSetting.setCacheMode(WebSettings.LOAD_NO_CACHE);
         this.getView().setClickable(true);
+    }
+
+    public class MyWebChromeClient extends WebChromeClient {
+        @Override
+        public void onProgressChanged(WebView view, int newProgress) {
+            if (newProgress == 100) {
+                mProgressBar.setVisibility(GONE);
+            } else {
+                if (mProgressBar.getVisibility() == GONE)
+                    mProgressBar.setVisibility(VISIBLE);
+                mProgressBar.setProgress(newProgress);
+            }
+            super.onProgressChanged(view, newProgress);
+        }
+    }
+
+    @Override
+    protected void onScrollChanged(int l, int t, int oldl, int oldt) {
+        AbsoluteLayout.LayoutParams lp = (AbsoluteLayout.LayoutParams) mProgressBar.getLayoutParams();
+        lp.x = l;
+        lp.y = t;
+        mProgressBar.setLayoutParams(lp);
+        super.onScrollChanged(l, t, oldl, oldt);
     }
 }
