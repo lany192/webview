@@ -23,4 +23,4 @@ A android webview with progressbar
    	}
    	
 # Preview
-![image](https://github.com/lany192/ProgressWebView/raw/master/preview/pic.png)
+![image](https://github.com/lany192/webview/raw/master/preview/pic.png)
