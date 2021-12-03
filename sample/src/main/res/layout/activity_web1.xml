@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <com.lany.library.ProgressWebView
+    <com.github.lany192.webkit.ProgressWebView
         android:id="@+id/webview1"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

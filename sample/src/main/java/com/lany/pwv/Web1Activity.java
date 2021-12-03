@@ -10,7 +10,7 @@ import android.webkit.WebViewClient;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.lany.library.ProgressWebView;
+import com.github.lany192.webkit.ProgressWebView;
 
 public class Web1Activity extends AppCompatActivity {
     private ProgressWebView mWebView;
