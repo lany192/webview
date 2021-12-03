@@ -1,5 +1,6 @@
-apply plugin: 'com.android.application'
-
+plugins {
+    id 'com.android.application'
+}
 android {
     compileSdkVersion 31
 
@@ -25,7 +26,12 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.appcompat:appcompat:1.4.0'
+    implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
     testImplementation 'junit:junit:4.13.2'
     implementation project(':webkit')
+    implementation project(':x5web')
+
+    //tencent x5 https://x5.tencent.com/docs/index.html
+    implementation 'com.tencent.tbs:tbssdk:54002-beta'
 }

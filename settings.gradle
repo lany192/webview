@@ -1,1 +1,2 @@
 include ':sample', ':webkit'
+include ':x5web'
